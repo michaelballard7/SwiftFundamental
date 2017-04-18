@@ -16,10 +16,15 @@ class ViewController: UIViewController {
     
     @IBOutlet var resultLabel: UILabel!
     
+    var result = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Will load as soon as app opens
+        
+        resultLabel.text = "Result is:  "
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,19 +34,54 @@ class ViewController: UIViewController {
     
     
     @IBAction func sumBtn(_ sender: Any) {
+        
+        if let firstNumber = Int(firstNumberTxt.text!) {
+            if let secondNumber = Int(secondNumberTxt.text!) {
+                result = firstNumber + secondNumber
+                resultLabel.text = "Result is: \(result)"
+            }
+        }
     }
     
 
     @IBAction func subtractionBtn(_ sender: Any) {
+        
+        if let firstNumber = Int(firstNumberTxt.text!) {
+            if let secondNumber = Int(secondNumberTxt.text!) {
+                result = firstNumber - secondNumber
+                resultLabel.text = "Result is: \(result)"
+            }
+        }
     }
 
     @IBAction func mutiplicationBtn(_ sender: Any) {
+        
+        if let firstNumber = Int(firstNumberTxt.text!) {
+            if let secondNumber = Int(secondNumberTxt.text!) {
+                result = firstNumber * secondNumber
+                resultLabel.text = "Result is: \(result)"
+            }
+        }
     }
     
     @IBAction func divisionBtn(_ sender: Any) {
+        
+        if let firstNumber = Int(firstNumberTxt.text!) {
+            if let secondNumber = Int(secondNumberTxt.text!) {
+                result = firstNumber / secondNumber
+                resultLabel.text = "Result is: \(result)"
+            }
+        }
     }
    
     @IBAction func moduloBtn(_ sender: Any) {
+        
+        if let firstNumber = Int(firstNumberTxt.text!) {
+            if let secondNumber = Int(secondNumberTxt.text!) {
+                result = firstNumber % secondNumber
+                resultLabel.text = "Result is: \(result)"
+            }
+        }
 
     }
     
